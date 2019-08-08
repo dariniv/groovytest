@@ -1,6 +1,6 @@
 def code
 
-node('java-agent') {
+node('master') {
 
   stage('Load') {
     code = load 'example.groovy'
