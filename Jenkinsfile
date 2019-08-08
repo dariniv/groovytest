@@ -3,12 +3,12 @@ def code
 node('master') {
 
   stage('Load') {
-    code = load 'example.groovy'
+    code = load 'test.groovy'
   }
 
   stage('Execute') {
-    code.example1()
+    code.test1()
   }
 }
 
-code.example2()
+code.test2()
