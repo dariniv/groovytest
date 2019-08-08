@@ -4,9 +4,9 @@
 
   stage('Execute') {
     code.test()
+    }
   }
-     }
-  }
+
 pipeline {
   agent any
   stages {
