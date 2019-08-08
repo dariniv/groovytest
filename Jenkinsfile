@@ -7,6 +7,5 @@ def code
   stage('Execute') {
     code.test()
   }
-}
 
 code.test()
