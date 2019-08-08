@@ -1,3 +1,12 @@
+  stage('Load') {
+    code = load 'test.Groovy'
+  }
+
+  stage('Execute') {
+    code.test()
+  }
+     }
+  }
 pipeline {
   agent any
   stages {
@@ -17,12 +26,4 @@ pipeline {
         }
       }
     }
-    
-node {
-    def rootDir = pwd()
-    def example = load "${rootDir}@script/test.Groovy "
-    example.exampleMethod()
-    example.otherExampleMethod()
-     }
-  }
 }
