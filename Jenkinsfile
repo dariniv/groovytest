@@ -1,11 +1,14 @@
 def code
 
+node('java-agent') {
+
   stage('Load') {
-    code = load 'test.groovy'
+    code = load 'example.groovy'
   }
 
   stage('Execute') {
-    code.test()
+    code.example1()
   }
+}
 
-code.test()
+code.example2()
