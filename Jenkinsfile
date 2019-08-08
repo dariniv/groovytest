@@ -9,8 +9,6 @@ pipeline {
         }
       }
     }
-    
-    
   stage('Stage 2') {
       steps {
         script {
@@ -18,4 +16,24 @@ pipeline {
         }
       }
     }
+   
+
+def code
+
+node('java-agent') {
+  stage('Checkout') {
+    checkout scm
+  }
+
+  stage('Load') {
+    code = load 'example.groovy'
+  }
+
+  stage('Execute') {
+    code.example1()
+  }
+}
+
+code.example2()
+  }
 }
