@@ -1,5 +1,5 @@
   stage('Load') {
-    code = load 'test.Groovy'
+    code = load 'test.groovy'
   }
 
   stage('Execute') {
