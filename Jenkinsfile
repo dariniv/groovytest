@@ -8,6 +8,8 @@ pipeline {
         }
       }
     }
+    
+    
   stage('Stage 2') {
       steps {
         script {
@@ -15,5 +17,12 @@ pipeline {
         }
       }
     }
+    
+node {
+    def rootDir = pwd()
+    def example = load "${rootDir}@script/test.Groovy "
+    example.exampleMethod()
+    example.otherExampleMethod()
+     }
   }
 }
