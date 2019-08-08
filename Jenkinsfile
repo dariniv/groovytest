@@ -7,8 +7,8 @@ node('master') {
   }
 
   stage('Execute') {
-    code.Example1()
+    code.example1()
   }
 }
 
-code.Example2()
+code.example2()
